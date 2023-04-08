@@ -6,7 +6,7 @@ from discord import app_commands
 
 GUILD = os.getenv("D_GUILD")
 
-class AbbeyCommands(commands.Cog):
+class MyCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -42,7 +42,7 @@ async def individual_hybrid_command(ctx):
 
 async def setup(bot):
 
-    await bot.add_cog(AbbeyCommands(bot), guild=discord.Object(id=GUILD))
+    await bot.add_cog(MyCommands(bot), guild=discord.Object(id=GUILD))
     bot.tree.add_command(test_individual_apc)
     bot.add_command(individual_command)
     bot.add_command(individual_hybrid_command)
