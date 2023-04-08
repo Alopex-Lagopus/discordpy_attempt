@@ -46,4 +46,3 @@ async def setup(bot):
     bot.tree.add_command(test_individual_apc)
     bot.add_command(individual_command)
     bot.add_command(individual_hybrid_command)
-    bot.add_command(test_individual_apc)
