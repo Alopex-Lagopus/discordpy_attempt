@@ -17,8 +17,8 @@ class MyCommands(commands.Cog):
 
     ### Does not register? and prefix command doesn't work ###
     @commands.hybrid_command(name="testhybrid", with_app_command=True)
-    async def testhybrid(self, interaction: discord.Interaction):
-        await interaction.response.send_message("Hello!")
+    async def testhybrid(self, ctx):
+        await ctx.send("Hello!")
 
     ### Does not register (as expected), but prefix command works ###
     @commands.command(name="testcommand")
